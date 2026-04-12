@@ -1,0 +1,107 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+}
+
+/* Header */
+.app-header {
+  background: linear-gradient(135deg, #1a365d, #2b6cb0);
+  color: white;
+  text-align: center;
+  padding: 28px 20px;
+}
+.app-header h1 { font-size: 2rem; margin-bottom: 6px; }
+.app-header p  { opacity: 0.85; font-size: 0.95rem; }
+
+/* Main */
+.main {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Form Card */
+.form-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.form-card h2 { font-size: 1.1rem; color: #2d3748; margin-bottom: 16px; }
+
+.form-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.input-box {
+  flex: 1;
+  min-width: 160px;
+  padding: 10px 14px;
+  border: 1.5px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+}
+.input-box:focus { border-color: #3182ce; }
+
+.btn-group { display: flex; gap: 8px; }
+
+/* Buttons */
+.btn {
+  padding: 10px 20px; border: none; border-radius: 8px;
+  font-size: 0.92rem; cursor: pointer; font-weight: 600;
+  transition: opacity 0.2s; white-space: nowrap;
+}
+.btn:hover { opacity: 0.88; }
+.btn-add    { background: #38a169; color: white; }
+.btn-update { background: #3182ce; color: white; }
+.btn-cancel { background: #718096; color: white; }
+
+/* Table Card */
+.table-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.table-card h2 { font-size: 1.1rem; color: #2d3748; margin-bottom: 16px; }
+.count { font-size: 0.85rem; color: #718096; font-weight: normal; }
+
+/* Table */
+.student-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.student-table th {
+  background: #ebf4ff; color: #2b6cb0;
+  padding: 12px 14px; text-align: left; font-weight: 600;
+}
+.student-table td {
+  padding: 11px 14px; border-bottom: 1px solid #e2e8f0; color: #4a5568;
+}
+.student-table tr:hover { background: #f7fafc; }
+.student-table tr:last-child td { border-bottom: none; }
+
+/* Action buttons */
+.action-btns { display: flex; gap: 8px; }
+.btn-edit {
+  padding: 6px 12px; background: #3182ce; color: white;
+  border: none; border-radius: 6px; cursor: pointer; font-size: 0.82rem;
+}
+.btn-del {
+  padding: 6px 12px; background: #e53e3e; color: white;
+  border: none; border-radius: 6px; cursor: pointer; font-size: 0.82rem;
+}
+.btn-edit:hover { background: #2b6cb0; }
+.btn-del:hover  { background: #c53030; }
+
+/* States */
+.loading { text-align: center; padding: 40px; color: #718096; }
+.error   { text-align: center; padding: 30px; color: #e53e3e; background: #fff5f5; border-radius: 8px; }
+.empty   { text-align: center; padding: 30px; color: #a0aec0; font-style: italic; }
